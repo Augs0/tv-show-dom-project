@@ -1,3 +1,51 @@
-#root {
-  color: red;
+:root{
+  --custom-purple:#805D93;
+  --custom-pink:#F49FBC;
+  --custom-orange:#FFD3BA;
+  --custom-green:#9EBD6E;
+  --custom-emerald:#169873;
+}
+
+/*  global styling  */
+html, body{
+  padding:0;
+  margin:0;
+  background:ghostwhite;
+}
+
+/* individual styling  */
+.wrapper{
+  background:var(--custom-emerald);
+  display:flex;
+  flex-wrap:wrap;
+  align-items:space-between;
+  justify-content:center;
+  max-width:900px;
+  margin:20px;
+  padding:10px;
+}
+
+.episode_wrapper{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  text-align: center;
+  margin:5px;
+  max-width:300px;
+  color:var(--custom-orange);
+  border:var(--custom-green) solid 2px;
+  padding:10px;
+}
+
+.title{
+  color:var(--custom-orange);
+}
+
+.episode_img{
+  padding:5px;
+  border:var(--custom-green) solid 2px;
+}
+
+.summary{
+  text-align:left;
 }

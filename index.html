@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TV Show Project | My Name (My GitHub username)</title>
-    <link href="style.css" rel="stylesheet" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  </head>
 
-  <body>
-    <div id="root">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TV Show Project | Augs0</title>
+  <link href="style.css" rel="stylesheet" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <header>
+    <h1 class="header">An episode guide to Game of Thrones</h1>
+  </header>
+  <main>
+    <div id="root" role="none presentation">
     </div>
+  </main>
+  <footer>
+    <p>Episode data was acquired from <a href="https://www.tvmaze.com/">TVMaze.com</a></p>
+  </footer>
+  <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
+  <script src="episodes.js"></script>
 
-    <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
-    <script src="episodes.js"></script>
+  <!-- Loads YOUR javascript code -->
+  <script src="script.js"></script>
+</body>
 
-    <!-- Loads YOUR javascript code -->
-    <script src="script.js"></script>
-  </body>
 </html>
