@@ -6,22 +6,32 @@
   --custom-emerald:#169873;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Pacifico&display=swap');
+
 /*  global styling  */
 html, body{
   padding:0;
   margin:0;
-  background:ghostwhite;
+  background:var(--custom-emerald);
 }
 
 /* individual styling  */
+header{
+  text-align:center;
+  padding:10px;
+}
+
+#header{
+  font-family:'Pacifico', sans-serif;
+}
+
 .wrapper{
-  background:var(--custom-emerald);
   display:flex;
   flex-wrap:wrap;
   align-items:space-between;
   justify-content:center;
-  max-width:900px;
-  margin:20px;
+  max-width:1200px;
+  margin:0 auto;
   padding:10px;
 }
 
@@ -30,14 +40,15 @@ html, body{
   flex-direction: column;
   align-items:center;
   text-align: center;
-  margin:5px;
+  margin:10px;
   max-width:300px;
   color:var(--custom-orange);
   border:var(--custom-green) solid 2px;
   padding:10px;
 }
 
-.title{
+.title, .season_ep{
+  font-family:'Pacifico', sans-serif;
   color:var(--custom-orange);
 }
 
@@ -46,6 +57,7 @@ html, body{
   border:var(--custom-green) solid 2px;
 }
 
-.summary{
+.info p{
+  font-family:'Open Sans', sans-serif;;
   text-align:left;
 }
