@@ -7,13 +7,17 @@
   <title>TV Show Project | August (Augs0)</title>
   <link href="style.css" rel="stylesheet" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
     <h1 id="header">An episode guide to Game of Thrones</h1>
     <input aria-label="Search a keyword to find an episode" type="text" id="searchBar"
-      placeholder="Use a keyword to find an episode" /><span id="res_num"></span>
+      placeholder="Use a keyword to find an episode" /><span role="none presentation" id="res_num"></span>
+    <select name="episodeTitles" id="episodeTitles">
+      <option value="Select an episode">Select an episode</option>
+    </select>
   </header>
   <main>
     <div id="root" role="none presentation">

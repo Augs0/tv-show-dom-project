@@ -45,8 +45,6 @@ function searchEpisodes(episodeList) {
     return ep.name.toLowerCase().indexOf(formattedInput) > -1 || ep.summary.toLowerCase().indexOf(formattedInput) > -1
   })
 
-  resNum.innerHTML = searchedEps.length + ' of ' + episodeList.length + 'episodes'
-
   if (searchedEps.length >= 1) {
     const wrapper = document.getElementsByClassName('wrapper')[0];
     wrapper.parentNode.removeChild(wrapper);
@@ -54,7 +52,11 @@ function searchEpisodes(episodeList) {
   } else {
     return
   }
+
+  input.value === '' ? resNum.innerHTML = '' : resNum.innerHTML = searchedEps.length + ' of ' + episodeList.length + ' episodes'
 }
+
+//300 - select functionality
 
 
 
