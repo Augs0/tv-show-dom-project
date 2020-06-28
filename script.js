@@ -2,6 +2,7 @@
 function setup() {
   const allEpisodes = getAllEpisodes();
   makePageForEpisodes(allEpisodes);
+  selectAnEpisode(allEpisodes);
 }
 
 function makePageForEpisodes(episodeList) {
@@ -57,7 +58,35 @@ function searchEpisodes(episodeList) {
 }
 
 //300 - select functionality
+const selector = document.getElementById('episodeTitles');
 
+selector.addEventListener('change', () => {
+  displayEpisode(listEps)
+});
+
+function displayEpisode(episodeList){
+  const selectedEp = episodeList.filter((ep) => {
+   return selector.value.indexOf(ep.name) > -1
+  })
+  if(selectedEp.length >= 1){
+    const wrapper = document.getElementsByClassName('wrapper')[0];
+    wrapper.parentNode.removeChild(wrapper);
+    makePageForEpisodes(selectedEp);
+  } else{
+    makePageForEpisodes(listEps)
+  }
+}
+
+function selectAnEpisode(episodeList){
+  episodeList.forEach(episode => {  
+    const option = document.createElement('OPTION');
+    option.classList.add('select_option');
+
+    option.innerText = `S0${episode.season}E0${episode.number} - ${episode.name}`;
+
+    selector.appendChild(option)
+  })
+}
 
 
 window.onload = setup;
