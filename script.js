@@ -59,26 +59,34 @@ function searchEpisodes(episodeList) {
 
 //300 - select functionality
 const selector = document.getElementById('episodeTitles');
+const controller = document.getElementById('control');
 
 selector.addEventListener('change', () => {
-  displayEpisode(listEps)
+  displayEpisode(listEps);
 });
 
-function displayEpisode(episodeList){
+function displayEpisode(episodeList) {
+
   const selectedEp = episodeList.filter((ep) => {
-   return selector.value.indexOf(ep.name) > -1
+    return selector.value.indexOf(ep.name) > -1
   })
-  if(selectedEp.length >= 1){
+  if (selectedEp.length >= 1) {
+    controller.textContent = "View all";
+    controller.value = "View all";
     const wrapper = document.getElementsByClassName('wrapper')[0];
     wrapper.parentNode.removeChild(wrapper);
     makePageForEpisodes(selectedEp);
-  } else{
+  } else {
+    controller.textContent = "Select an episode";
+    controller.value = "Select an episode";
+    const wrapper = document.getElementsByClassName('wrapper')[0];
+    wrapper.parentNode.removeChild(wrapper);
     makePageForEpisodes(listEps)
   }
 }
 
-function selectAnEpisode(episodeList){
-  episodeList.forEach(episode => {  
+function selectAnEpisode(episodeList) {
+  episodeList.forEach(episode => {
     const option = document.createElement('OPTION');
     option.classList.add('select_option');
 
@@ -86,6 +94,31 @@ function selectAnEpisode(episodeList){
 
     selector.appendChild(option)
   })
+}
+
+const colourSelector = document.getElementById('colourSchemes');
+const body = document.body;
+const epwrapper = document.getElementsByClassName('episode_wrapper');
+
+colourSelector.addEventListener('click', selectColours);
+
+// Handle colour schemes
+function selectColours() {
+  if (colourSelector.value === 'targaryen') {
+    body.classList = '';
+    body.classList.add('targaryen');
+    for (let i = 0; i < epwrapper.length; i++) {
+      epwrapper[i].classList = 'episode_wrapper';
+      epwrapper[i].classList.add('targaryen');
+    }
+  } else if (colourSelector.value === 'stark') {
+    body.classList = '';
+    body.classList.add('stark');
+    for (let i = 0; i < epwrapper.length; i++) {
+      epwrapper[i].classList = 'episode_wrapper';
+      epwrapper[i].classList.add('stark');
+    }
+  }
 }
 
 

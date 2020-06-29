@@ -14,11 +14,15 @@
   <header>
     <h1 id="header">An episode guide to Game of Thrones</h1>
     <input aria-label="Search a keyword to find an episode" type="text" id="searchBar"
-      placeholder="Use a keyword to find an episode" /><span id="res_num"></span><br/>
+      placeholder="Use a keyword to find an episode" /><span id="res_num"></span><br />
     <select name="episodeTitles" id="episodeTitles">
-      <option value="Select an episode">Select an episode</option>
+      <option id="control" value="Select an episode">Select an episode</option>
     </select>
-    <button id="returnBtn">See all episodes</button>
+    <select name="colourSchemes" id="colourSchemes">
+      <option value="Choose your house">Choose your house</option>
+      <option value="targaryen">House Targaryen</option>
+      <option value="stark">House Stark</option>
+    </select>
   </header>
   <main>
     <div id="root" role="none presentation">

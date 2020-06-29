@@ -4,17 +4,46 @@
   --custom-orange:#FFD3BA;
   --custom-green:#9EBD6E;
   --custom-emerald:#169873;
+  --targaryen-red:#961f1f;
+  --targaryen-black:#040404;
+  --stark-grey:#f6f6f6;
+  --stark-dark-grey:#7b7b7b;
 }
 
 /*  global styling  */
 html, body{
   padding:0;
   margin:0;
-  background:var(--custom-emerald);
 }
 
 h3, h4, h5, h6, p, span{
   font-family:'Lato', sans-serif;
+}
+
+.targaryen{
+  background-color:var(--targaryen-black);
+  color:var(--targaryen-red);
+}
+
+.targaryen .episode_wrapper{
+  border:solid 1px var(--targaryen-red);
+}
+
+.targaryen h2, .targaryen h3, .targaryen p{
+  color:var(--targaryen-red);
+}
+
+.stark{
+  background-color:var(--stark-dark-grey);
+  color:var(--stark-grey);
+}
+
+.stark .episode_wrapper{
+  border:solid 1px var(--stark-grey);
+}
+
+.stark h2, .stark h3, .stark p{
+  color:var(--stark-grey);
 }
 
 /* individual styling  */
@@ -28,7 +57,7 @@ header{
   font-family:'Permanent Marker', cursive;
 }
 
-#searchBar, #episodeTitles{
+#searchBar, #episodeTitles, #colourSchemes{
   width:200px;
   height:30px;
   padding:5px;
@@ -38,7 +67,6 @@ header{
 #res_num{
   font-size:1.5rem;
   padding:5px;
-  color:var(--custom-orange)
 }
 
 /*  Main */
@@ -58,18 +86,15 @@ header{
   text-align: center;
   max-width:300px;
   margin:10px 0;
-  color:var(--custom-orange);
-  border:var(--custom-green) solid 2px;
   padding:10px;
 }
 
 .title, .season_ep{
-  color:var(--custom-orange);
+  
 }
 
 .episode_img{
   padding:5px;
-  border:var(--custom-green) solid 2px;
 }
 
 .info p{
@@ -80,8 +105,6 @@ header{
 /* Footer */
 footer{
   font-weight:600;
-  background:var(--custom-orange);
-  color:var(--custom-purple);
   font-size:1rem;
   padding:5px;
 }
