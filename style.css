@@ -8,6 +8,8 @@
   --targaryen-black:#040404;
   --stark-grey:#f6f6f6;
   --stark-dark-grey:#7b7b7b;
+  --lannister-red:#be0808;
+  --lannister-gold:#f7cc22;
 }
 
 /*  global styling  */
@@ -16,7 +18,7 @@ html, body{
   margin:0;
 }
 
-h3, h4, h5, h6, p, span{
+h3, h4, h5, h6, p, span, a{
   font-family:'Lato', sans-serif;
 }
 
@@ -29,7 +31,7 @@ h3, h4, h5, h6, p, span{
   border:solid 1px var(--targaryen-red);
 }
 
-.targaryen h2, .targaryen h3, .targaryen p{
+.targaryen h2, .targaryen h3, .targaryen p, .targaryen a{
   color:var(--targaryen-red);
 }
 
@@ -42,8 +44,21 @@ h3, h4, h5, h6, p, span{
   border:solid 1px var(--stark-grey);
 }
 
-.stark h2, .stark h3, .stark p{
+.stark h2, .stark h3, .stark p, .stark a{
   color:var(--stark-grey);
+}
+
+.lannister{
+  background-color:var(--lannister-red);
+  color:var(--lannister-gold);
+}
+
+.lannister .episode_wrapper{
+  border:solid 1px var(--lannister-gold);
+}
+
+.lannister h2, .lannister h3, .lannister p, .lannister a{
+  color:var(--lannister-gold);
 }
 
 /* individual styling  */
@@ -89,10 +104,6 @@ header{
   padding:10px;
 }
 
-.title, .season_ep{
-  
-}
-
 .episode_img{
   padding:5px;
 }
@@ -107,4 +118,5 @@ footer{
   font-weight:600;
   font-size:1rem;
   padding:5px;
+  color:black;
 }

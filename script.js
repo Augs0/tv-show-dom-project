@@ -118,6 +118,18 @@ function selectColours() {
       epwrapper[i].classList = 'episode_wrapper';
       epwrapper[i].classList.add('stark');
     }
+  } else if (colourSelector.value === 'lannister') {
+    body.classList = '';
+    body.classList.add('lannister');
+    for (let i = 0; i < epwrapper.length; i++) {
+      epwrapper[i].classList = 'episode_wrapper';
+      epwrapper[i].classList.add('lannister');
+    }
+  } else {
+    body.classList = '';
+    for (let i = 0; i < epwrapper.length; i++) {
+      epwrapper[i].classList = 'episode_wrapper';
+    }
   }
 }
 
